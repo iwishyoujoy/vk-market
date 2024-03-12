@@ -1,9 +1,11 @@
 import { Image, RichCell, Separator, Spacing, Text } from "@vkontakte/vkui";
+import { Icon24DeleteOutline } from "@vkontakte/icons";
+import { useDispatch } from "react-redux";
 import cn from 'classnames';
 
 import styles from './styles.module.css';
 import { Controls } from "../Controls";
-import { Icon24DeleteOutline } from "@vkontakte/icons";
+import { removeItem } from "../../redux/cartSlice";
 
 interface ICartItemProps {
     className?: string;
@@ -19,6 +21,11 @@ interface ICartItemProps {
 
 export const CartItem: React.FC<ICartItemProps> = (props) => {
     const { className, separatorClassName, title, description, price, image, category, quantity, id } = props;
+    const dispatch = useDispatch();
+
+    const handleDeleteClick = () => {
+        dispatch(removeItem(id));
+    }
 
     return (
         <>
@@ -32,8 +39,8 @@ export const CartItem: React.FC<ICartItemProps> = (props) => {
                 }
                 after={
                     <div className={styles.priceAndDeleteContainer}>
-                        <Text className={styles.price}>{price} $</Text>
-                        <div className={styles.delete}>
+                        <Text className={styles.price}>{price * quantity} $</Text>
+                        <div className={styles.delete} onClick={handleDeleteClick}>
                             <Icon24DeleteOutline height={20} width={20}/>
                             <Text>Delete</Text>
                         </div>
