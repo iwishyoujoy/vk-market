@@ -1,3 +1,25 @@
 .cell {
     height: 150px;
 }
+
+.price {
+    height: 30px;
+}
+
+.priceAndDeleteContainer{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: space-between;
+    row-gap: 35px;
+}
+
+.delete {
+    cursor: pointer;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+    column-gap: 5px;
+    color: var(--disabled-color);
+}

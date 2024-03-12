@@ -14,7 +14,7 @@ export const cartSlice = createSlice({
  initialState,
  reducers: {
     setCartItems: (state, action: PayloadAction<ICartItem[]>) => {
-      state.items = action.payload;
+      state.items = action.payload.map(item => ({ ...item, quantity: 1 }));
     },
     removeItem: (state, action: PayloadAction<number>) => {
       state.items = state.items.filter(item => item.id !== action.payload);

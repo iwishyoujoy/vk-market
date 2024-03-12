@@ -52,12 +52,14 @@ export const CartItems: React.FC<ICartItemsProps> = (props) => {
                 return (
                     <CartItem 
                         key={item.id} 
+                        id={item.id}
                         title={item.title} 
                         description={item.description} 
                         price={item.price} 
                         image={item.image} 
                         category={item.category}
                         separatorClassName={styles.separator}
+                        quantity={item.quantity}
                     />
                 )
             })}
