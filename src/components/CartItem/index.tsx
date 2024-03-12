@@ -1,4 +1,4 @@
-import { Image, RichCell, Separator, Spacing, Text } from "@vkontakte/vkui";
+import { Caption, Image, Paragraph, RichCell, Separator, Spacing, Text, Title } from "@vkontakte/vkui";
 import { Icon24DeleteOutline } from "@vkontakte/icons";
 import { useDispatch } from "react-redux";
 import cn from 'classnames';
@@ -32,7 +32,7 @@ export const CartItem: React.FC<ICartItemProps> = (props) => {
             <RichCell
                 className={styles.cell}
                 text={
-                    <span className={styles.description}>{description}</span>
+                    <Text weight="3" className={styles.description}>{description}</Text>
                 }
                 before={
                     <Image src={image} borderRadius="m" size={120}/>
@@ -50,7 +50,7 @@ export const CartItem: React.FC<ICartItemProps> = (props) => {
                     <Controls counter={quantity} id={id}/>
                 }
             >
-                {title}
+                <Title className={styles.title}>{title}</Title>
             </RichCell>
             <Spacing size={10} className={cn(styles.separator, separatorClassName)}>
                 <Separator wide/>

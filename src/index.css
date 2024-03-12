@@ -4,6 +4,12 @@
 
   --active-color: #447bba;
   --disabled-color: #99a2ad;
+
+  --font-size-s: 14px;
+  --line-height-s: 16px;
+
+  --font-size-m: 15px;
+
 }
 
 body {

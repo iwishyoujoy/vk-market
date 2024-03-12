@@ -2,6 +2,21 @@
     height: 150px;
 }
 
+.description {
+    margin-top: 5px;
+    font-size: var(--font-size-s);
+    line-height: var(--line-height-s);
+    text-wrap: wrap;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+}
+
+.title {
+    font-size: var(--font-size-m);
+}
+
 .price {
     height: 30px;
 }
@@ -11,7 +26,7 @@
     flex-direction: column;
     align-items: flex-end;
     justify-content: space-between;
-    row-gap: 35px;
+    row-gap: 50px;
 }
 
 .delete {
