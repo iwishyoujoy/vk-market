@@ -1,0 +1,15 @@
+.container {
+    display: grid;
+    grid-template-columns: 900px 300px;
+    grid-template-areas: "items checkout";
+    min-height: 300px;
+    column-gap: 10px;
+}
+
+.items {
+    grid-area: items;
+}
+
+.checkout {
+    grid-area: checkout;
+}

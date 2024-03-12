@@ -1,10 +1,16 @@
+import {
+  AppRoot,
+} from '@vkontakte/vkui';
+import '@vkontakte/vkui/dist/vkui.css';
+
 import './App.css';
+import { CartPage } from './pages/CartPage';
 
 function App() {
   return (
-    <div className="App">
-      
-    </div>
+    <AppRoot>
+      <CartPage />
+    </AppRoot>
   );
 }
 
