@@ -1,4 +1,6 @@
 import { Group } from '@vkontakte/vkui';
+import cn from 'classnames';
+
 import styles from './styles.module.css';
 
 interface ICheckoutProps {
@@ -7,9 +9,9 @@ interface ICheckoutProps {
 
 export const Checkout: React.FC<ICheckoutProps> = (props) => {
     const { className } = props;
-    
+
     return (
-        <Group className={className}>
+        <Group className={cn(className, styles.container)}>
             
         </Group>
     )
