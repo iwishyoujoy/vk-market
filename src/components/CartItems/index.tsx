@@ -1,5 +1,5 @@
 import { Group, Spinner } from '@vkontakte/vkui';
-import { Icon16ErrorCircle } from '@vkontakte/icons';
+import { Icon16ErrorCircle, Icon20Ghost } from '@vkontakte/icons';
 import cn from 'classnames';
 import { useDispatch, useSelector } from 'react-redux';
 import { useEffect } from 'react';
@@ -41,7 +41,16 @@ export const CartItems: React.FC<ICartItemsProps> = (props) => {
         return (
             <Group className={cn(className, styles.error)}>
                 <Icon16ErrorCircle height={40} width={40} fill="#9bb2cc"/>
-                <span className={styles.errorText}>Что-то пошло не так при загрузке данных, перезагрузите страницу</span>
+                <span className={styles.errorText}>Something went wrong when loading the data, reload the page</span>
+            </Group>
+        )
+    }
+
+    if (cartItems.length === 0) {
+        return (
+            <Group className={cn(className, styles.error)}>
+                <Icon20Ghost height={40} width={40} fill="#9bb2cc"/>
+                <span className={styles.errorText}>It seems you haven't added anything to the cart.</span>
             </Group>
         )
     }

@@ -1,12 +1,15 @@
-import { createSlice, PayloadAction } from '@reduxjs/toolkit';
+import { createSelector, createSlice, PayloadAction } from '@reduxjs/toolkit';
 import { ICartItem } from '../types/cart';
+import { RootState } from './store';
 
 interface CartState {
  items: ICartItem[];
+ deliveryCost: number;
 }
 
 const initialState: CartState = {
  items: [],
+ deliveryCost: 20,
 };
 
 export const cartSlice = createSlice({
@@ -37,6 +40,11 @@ export const cartSlice = createSlice({
     }
  },
 });
+
+export const selectTotalCartPrice = createSelector(
+    (state: RootState) => state.cart.items,
+    (items) => items.reduce((total, item) => total + item.price * item.quantity, 0)
+);
 
 export const { setCartItems, removeItem, incrementItemQuantity, decrementItemQuantity } = cartSlice.actions;
 

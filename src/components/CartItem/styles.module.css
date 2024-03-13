@@ -4,6 +4,7 @@
 
 .description {
     margin-top: 5px;
+    height: 32px;
     font-size: var(--font-size-s);
     line-height: var(--line-height-s);
     text-wrap: wrap;
