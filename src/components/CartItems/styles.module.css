@@ -6,6 +6,9 @@
     row-gap: 10px;
 }
 
+.errorText {
+    text-align: center;
+}
 
 .separator:last-child {
     display: none;

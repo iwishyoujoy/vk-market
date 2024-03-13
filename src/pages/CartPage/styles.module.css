@@ -13,3 +13,12 @@
 .checkout {
     grid-area: checkout;
 }
+
+@media (max-width: 768px) {
+    .container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+    }
+}

@@ -2,6 +2,13 @@
     height: 150px;
 }
 
+@media (max-width: 768px) {
+    .cell {
+        width: calc(100vw - 20px);
+    }
+}
+
+
 .description {
     margin-top: 5px;
     height: 32px;

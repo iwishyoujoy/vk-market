@@ -11,8 +11,8 @@ export const CartPage = () => {
             <PanelHeader>VK Market</PanelHeader>
             <Wrapper>
                 <div className={styles.container}>
-                    <CartItems className={styles.items}/>
                     <Checkout className={styles.checkout}/>
+                    <CartItems className={styles.items}/>
                 </div>
             </Wrapper>
         </>
