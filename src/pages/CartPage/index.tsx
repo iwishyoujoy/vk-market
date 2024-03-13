@@ -8,7 +8,7 @@ import styles from './styles.module.css';
 export const CartPage = () => {
     return (
         <>
-            <PanelHeader>VK market</PanelHeader>
+            <PanelHeader>VK Market</PanelHeader>
             <Wrapper>
                 <div className={styles.container}>
                     <CartItems className={styles.items}/>
