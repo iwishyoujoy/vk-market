@@ -5,7 +5,8 @@
 ## Технологии
 - React
 - TypeScript
-- Redux Toolkit 
+- Redux Toolkit
+- VK UI
 - [Fake Store API](https://fakestoreapi.com/)
 
 ## Дополнительно реализовано
