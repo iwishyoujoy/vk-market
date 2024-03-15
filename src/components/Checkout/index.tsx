@@ -5,6 +5,7 @@ import styles from './styles.module.css';
 import { useSelector } from 'react-redux';
 import { RootState } from '../../redux/store';
 import { selectTotalCartPrice } from '../../redux/cartSlice';
+import { CheckoutFloatingBlock } from './CheckoutFloatingBlock';
 
 interface ICheckoutProps {
     className?: string;
@@ -34,11 +35,7 @@ export const Checkout: React.FC<ICheckoutProps> = (props) => {
             <Spacing size={10} className={styles.separator}>
                 <Separator wide/>
             </Spacing>
-            <div className={styles.checkout}>
-                <Title level='3' className={styles.checkoutItem}>Total:</Title>
-                <Title level='3' className={styles.checkoutItem}>{((cartItems.length > 0 ? delivery : 0) + totalCartItems).toFixed(2)} $</Title>
-            </div>
-            <Button className={styles.button} size='m'>Proceed to checkout</Button>
+            <CheckoutFloatingBlock className={styles.floatingBlock}/>
         </Group>
     )
 }

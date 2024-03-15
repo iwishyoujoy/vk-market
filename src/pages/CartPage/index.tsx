@@ -1,5 +1,6 @@
 import { PanelHeader } from '@vkontakte/vkui'
 
+import { CheckoutFloatingBlock } from '../../components/Checkout/CheckoutFloatingBlock';
 import { CartItems } from '../../components/CartItems';
 import { Checkout } from '../../components/Checkout';
 import { Wrapper } from '../../components/Wrapper';
@@ -11,8 +12,9 @@ export const CartPage = () => {
             <PanelHeader>VK Market</PanelHeader>
             <Wrapper>
                 <div className={styles.container}>
-                    <Checkout className={styles.checkout}/>
                     <CartItems className={styles.items}/>
+                    <Checkout className={styles.checkout}/>
+                    <CheckoutFloatingBlock className={styles.floatingBlock}/>
                 </div>
             </Wrapper>
         </>
