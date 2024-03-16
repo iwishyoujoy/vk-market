@@ -1,5 +1,4 @@
 .loading, .error {
-    height: calc(100vh - 330px);
     display: flex;
     flex-direction: column;
     align-items: center;
