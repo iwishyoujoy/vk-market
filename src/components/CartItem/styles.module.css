@@ -1,5 +1,6 @@
 .cell {
     height: 150px;
+    padding: 8px 10px;
 }
 
 @media (max-width: 768px) {

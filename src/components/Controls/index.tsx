@@ -1,4 +1,4 @@
-import { Icon16Add, Icon20DeleteOutline, Icon16Minus } from "@vkontakte/icons";
+import { Icon16Add, Icon16Minus } from "@vkontakte/icons";
 import { Div } from "@vkontakte/vkui";
 import { useDispatch } from "react-redux";
 

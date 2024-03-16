@@ -1,4 +1,4 @@
-import { Button, Group, Separator, Spacing, Title } from '@vkontakte/vkui';
+import { Group, Separator, Spacing, Title } from '@vkontakte/vkui';
 import cn from 'classnames';
 
 import styles from './styles.module.css';

@@ -66,7 +66,6 @@ export const CartItems: React.FC<ICartItemsProps> = (props) => {
                         description={item.description} 
                         price={item.price} 
                         image={item.image} 
-                        category={item.category}
                         separatorClassName={styles.separator}
                         quantity={item.quantity}
                     />
