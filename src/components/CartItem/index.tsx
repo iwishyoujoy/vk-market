@@ -39,7 +39,7 @@ export const CartItem: React.FC<ICartItemProps> = (props) => {
                 }
                 after={
                     <div className={styles.priceAndDeleteContainer}>
-                        <Text className={styles.price}>{price * quantity} $</Text>
+                        <Text className={styles.price}>{(price * quantity).toFixed(2)} $</Text>
                         <div className={styles.delete} onClick={handleDeleteClick}>
                             <Icon24DeleteOutline height={20} width={20}/>
                             <Text>Delete</Text>
