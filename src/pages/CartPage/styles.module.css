@@ -31,7 +31,14 @@
     .floatingBlock {
         position: sticky;
         bottom: 0;
-        background-color: white;
         padding: 12px 10px;
+    }
+
+    .light {
+        background-color: white;
+    }
+
+    .dark {
+        background-color: var(--dark-theme-background);
     }
 }

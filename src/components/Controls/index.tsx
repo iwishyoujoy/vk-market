@@ -1,6 +1,7 @@
 import { Icon16Add, Icon16Minus } from "@vkontakte/icons";
-import { Div } from "@vkontakte/vkui";
+import { Div, useAppearance } from "@vkontakte/vkui";
 import { useDispatch } from "react-redux";
+import cn from 'classnames';
 
 import styles from './styles.module.css';
 import { decrementItemQuantity, incrementItemQuantity } from "../../redux/cartSlice";
@@ -12,6 +13,7 @@ interface IControlsProps {
 
 export const Controls: React.FC<IControlsProps> = ({counter, id}) => {
     const dispatch = useDispatch();
+    const theme = useAppearance();
 
     const handleIncrementClick = () => {
         dispatch(incrementItemQuantity(id));
@@ -22,7 +24,7 @@ export const Controls: React.FC<IControlsProps> = ({counter, id}) => {
     }
     
     return (
-        <Div className={styles.controls}>
+        <Div className={cn(styles.controls, theme === 'light' ? styles.light : styles.dark)}>
             <Icon16Minus 
                 height={20} 
                 width={20} 

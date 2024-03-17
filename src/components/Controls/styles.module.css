@@ -21,7 +21,14 @@
 
     border: 1px solid var(--border-color);
     border-radius: var(--border-radius);
+}
+
+.light {
     color: black;
+}
+
+.dark {
+    color: white;
 }
 
 .active {
