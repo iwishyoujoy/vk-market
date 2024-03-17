@@ -1,8 +1,9 @@
 import { configureStore } from '@reduxjs/toolkit';
-
-import { logger } from './middlewares/logger';
 import { cartApi } from './services/api';
 import cartReducer from './cartSlice';
+
+// использую логгер только в среде development
+// import { logger } from './middlewares/logger';
 
 export const store = configureStore({
     reducer: {
@@ -10,7 +11,7 @@ export const store = configureStore({
         [cartApi.reducerPath]: cartApi.reducer,
     },
     middleware: (getDefaultMiddleware) => 
-        getDefaultMiddleware().concat([cartApi.middleware, logger]),
+        getDefaultMiddleware().concat([cartApi.middleware]),
     devTools: process.env.NODE_ENV !== 'production',
 });
 
